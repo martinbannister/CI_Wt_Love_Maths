@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="heading">
+        <img src="assets/images/logo.png" alt="Love Maths Logo" class="logo"> Love Maths
+    </h1>
+
+    <div class="game_area">
+        <div class="controls_area">
+            <button class="btn btn--big btn--green">
+                <span class="fas fa-plus"></span>
+            </button>
+            <button class="btn btn--big btn--blue">
+                <span class="fas fa-minus"></span>
+            </button>
+            <button class="btn btn--big btn--orange">
+                <span class="fas fa-times"></span>
+            </button>
+            <button class="btn btn--big btn--red">
+                <span class="fas fa-divide"></span>
+            </button>
+        </div>
+        <div class="question_area">
+            <span id="operand1">0</span>
+            <span id="operator">x</span>
+            <span id="operand2">0</span>
+            <span>=</span>
+            <p class="answer_message">Enter Answer:</p>
+            <input type="number" id="answer_box">
+        </div>
+        <button class="bt btn--gray">Submit Answer</button>
+    </div>
+
+    <div class="score_area">
+        <p class="scores">Correct Answers: <span id="score">0</span></p>
+        <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+    </div>
+
+</body>
+
+</html>
