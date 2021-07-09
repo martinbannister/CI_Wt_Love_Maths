@@ -69,6 +69,10 @@ function calculateCorrectAnswer() {
 
 function incrementScore() {
 
+    // Gets the current score from the DOM and increment it by one
+    let elemScore = document.getElementById('score');
+    let oldScore = parseInt(elemScore.innerText);
+    elemScore.innerText = ++oldScore;
 }
 
 function incrementWrongAnswer() {
