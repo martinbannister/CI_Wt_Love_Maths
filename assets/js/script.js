@@ -27,8 +27,25 @@ function runGame(gameType) {
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
 
+    switch (gameType) {
+        case 'addition':
+            displayAdditonQuestion(num1, num2);
+            break;
+
+        case 'subtract':
+            displaySubtractQuestion(num1, num2);
+            break;
+
+        default:
+            alert(`Unknown game type ${gameType}`);
+            throw `Unknown game type ${gameType}, aborting!`;
+            break;
+    }
+
     if (gameType === 'addition') {
         displayAdditonQuestion(num1, num2);
+    } else if (gameType === 'subtract') {
+        displaySubtractQuestion(num1, num2);
     } else {
         alert(`Unknown game type ${gameType}`);
         throw `Unknown game type ${gameType}, aborting!`;
@@ -95,9 +112,19 @@ function displayAdditonQuestion(operand1, operand2) {
 
 function displaySubtractQuestion() {
 
+    document.getElementById('operand1').textContent = operand1;
+    document.getElementById('operand2').textContent = operand2;
+    document.getElementById('operator').textContent = '-';
+
+
 }
 
 function displayMultiplyQuestion() {
+
+    document.getElementById('operand1').textContent = operand1;
+    document.getElementById('operand2').textContent = operand2;
+    document.getElementById('operator').textContent = 'x';
+
 
 }
 
