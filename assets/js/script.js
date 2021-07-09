@@ -153,7 +153,17 @@ function displayMultiplyQuestion(operand1, operand2) {
 
 function displayDivisionQuestion(operand1, operand2) {
 
-    document.getElementById('operand1').textContent = operand1 > operand2 ? operand1 : operand2;
-    document.getElementById('operand2').textContent = operand1 > operand2 ? operand2 : operand1;
-    document.getElementById('operator').textContent = '÷';
+    let newOperand1 = operand1 > operand2 ? operand1 : operand2;
+    let newOperand2 = operand1 > operand2 ? operand2 : operand1;
+
+    if (newOperand1 % newOperand2 === 0) {
+        document.getElementById('operand1').textContent = newOperand1;
+        document.getElementById('operand2').textContent = newOperand2;
+        document.getElementById('operator').textContent = '÷';
+    } else {
+        console.log(`skipped: ${newOperand1} / ${newOperand2} remainder: ${newOperand1 % newOperand2}`)
+        runGame('division');
+    }
+
+
 }
