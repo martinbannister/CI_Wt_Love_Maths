@@ -24,7 +24,7 @@ function runGame(gameType) {
     // Math.randon generates random numbers
     // +1 makes the nunmber 1-25 instead of 0-24
 
-    document.getElementsById('answer_box').value = '';
+    document.getElementById('answer_box').value = '';
 
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
